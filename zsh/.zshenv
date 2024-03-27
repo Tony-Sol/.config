@@ -20,8 +20,11 @@ export XDG_PUBLICSHARE_DIR="${XDG_PUBLICSHARE_DIR:-${HOME}/Public}"
 export XDG_TEMPLATES_DIR="${XDG_TEMPLATES_DIR:-${HOME}/Templates}"
 export XDG_VIDEOS_DIR="${XDG_VIDEOS_DIR:-${HOME}/Videos}"
 # set zsh configs
-export ZDOTDIR="${XDG_CONFIG_HOME}/zsh"
 export ZLE_RPROMPT_INDENT=0
+export ZDOTDIR="${XDG_CONFIG_HOME}/zsh"
+export HISTFILE="${ZDOTDIR}/.zsh_history"
+export HISTSIZE=200000
+export SAVEHIST=200000
 
 # =====================================================================
 
@@ -176,6 +179,7 @@ setopt INTERACTIVE_COMMENTS
 setopt PROMPT_SUBST
 setopt HIST_IGNORE_DUPS
 setopt SHARE_HISTORY
+setopt EXTENDED_HISTORY
 setopt EMACS
 
 # zsh extensions
